@@ -36,6 +36,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'car.apps.CarConfig',
 ]
 
 MIDDLEWARE = [
@@ -117,8 +118,8 @@ USE_L10N = True
 
 USE_TZ = True
 
-# Redirect to home URL after login (Default redirects to /accounts/profile/)
-##LOGIN_REDIRECT_URL = '/account/'
+# Redirect to home URL after login (Default redirects to car )
+LOGIN_REDIRECT_URL = '/car/'
 
 # The absolute path to the directory where collectstatic will collect static files for deployment.
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
