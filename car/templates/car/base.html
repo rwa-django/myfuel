@@ -13,14 +13,46 @@
 </head>
 <body>
     <div class="grid-y grid-frame">
-        <div class="cell shrink header xmedium- cell-block-container">
-            <h2>{% block APPTITLE %}{% endblock %}</h2>
+        <div class="">
+            <!-- mobile nav bar -->
+            <div class="title-bar" data-responsive-toggle="example-animated-menu" data-hide-for="medium">
+                <div class="">
+                    <button class="menu-icon" type="button" data-toggle></button>
+                </div>
+                <div class="cell">
+                    <div class="grid-x">
+                        <div class="cell small-10 text-center">
+                            Two
+                        </div>
+                        <div class="cell small-2"></div>
+                    </div>
+                </div>
+            </div>
+            <!-- /mobile nav bar -->
+            <div class="top-bar" id="example-animated-menu" data-animate="hinge-in-from-top spin-out">
+                <div class="top-bar-left">
+                    <ul class="dropdown menu" data-dropdown-menu>
+                        <li class="menu-text">Site Title</li>
+                        <li>
+                            <a href="#">One</a>
+                            <ul class="menu vertical">
+                                <li><a href="#">One</a></li>
+                                <li><a href="#">Two</a></li>
+                                <li><a href="#">Three</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">Two</a></li>
+                        <li><a href="#">Three</a></li>
+                    </ul>
+                </div>
+            </div>
         </div>
         <div class="cell medium-auto medium-cell-block-container">
             <div class="grid-x grid-padding-x">
                 <div class="cell shrink"></div>
                 <div class="cell auto xmedium-4 medium-cell-block-y text-center">
                     <h2>Independent scrolling body</h2>
+                    <span>{% block APPTITLE %}{% endblock %}</span>
                     <p>a<br>b<br>c<br></p> <p>a<br>b<br>c<br></p>
                     <p>a<br>b<br>cc<br></p> <p>a<br>b<br>ccc<br></p>
                 </div>
@@ -31,5 +63,10 @@
             <span>© 2019 rwalser.ch - Alle Rechte vorbehalten.</span>
         </div>
     </div>
+    <script src="{% static 'js/vendor/jquery.js' %}"></script>
+    <script src="{% static 'js/vendor/what-input.js' %}"></script>
+    <script src="{% static 'js/vendor/foundation.js' %}"></script>
+    <script src="{% static 'js/app.js' %}"></script>
+    <script src="{% static 'js/chart.js' %}"></script>
 </body>
 </html>
