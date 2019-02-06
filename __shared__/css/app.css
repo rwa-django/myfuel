@@ -3,27 +3,45 @@ body {
   margin: 0px;
 }
 
-.header, .footer {
-  background-color: #ddd;
-  text-align: center;
+/* DEBUG */
+div {
+  _border: 1px dotted red;
 }
 
-.footer {
-  font-size: 9px;
+.header {
+  text-align: center;
 }
 
 h1, h3 {
   text-align: center;
 }
 
-.demo-toggle-title {
-  margin-top: 0.5rem;
+.main {
+  height: calc(100vh - 69px);
+  _background-color: #0092A6;
+  margin-bottom: 0;
 }
 
-div {
-  _border: 1px dotted red;
+footer {
+    background-color: #e6e6e6;
+    color: #cc8b00;
+    display: flex;
+    font-size: 9px;
+    justify-content: center;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    left: 0;
 }
 
+@media screen and (max-width: 39.9375em) {
+  .main {
+    height: calc(100vh - 55px) !important;
+  }
+}
+
+
+/* NAVIGATION */
 .title-bar,
 .top-bar {
   background: #e6e6e6;
@@ -41,3 +59,4 @@ div {
 .dropdown.menu > li.is-dropdown-submenu-parent > a::after {
   border-color: orange transparent transparent;
 }
+

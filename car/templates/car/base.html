@@ -12,41 +12,42 @@
     <title>My Fuel</title>
 </head>
 <body>
-    <div class="grid-y grid-frame">
-        <div class="">
-            <!-- mobile nav bar -->
-            <div class="title-bar" data-responsive-toggle="example-animated-menu" data-hide-for="medium">
-                <div class="">
-                    <button class="menu-icon" type="button" data-toggle></button>
-                </div>
-                <div class="cell">
-                    <div class="grid-x">
-                        <div class="cell small-10 text-center">
-                            {% block APPTITLE-MOB %}{% endblock %}
-                        </div>
-                        <div class="cell small-2"></div>
-                    </div>
-                </div>
+    <header class="">
+        <!-- mobile nav bar -->
+        <div class="title-bar" data-responsive-toggle="example-animated-menu" data-hide-for="medium">
+            <div class="">
+                <button class="menu-icon" type="button" data-toggle></button>
             </div>
-            <!-- /mobile nav bar -->
-            <div class="top-bar grid-x" id="example-animated-menu" data-animate="hinge-in-from-top spin-out">
-                <div class="top-bar-left cell small-4">
-                    <ul class="dropdown menu" data-dropdown-menu>
-                        <li><a href="#">Menu</a>
-                            <ul class="menu vertical">
-                                <li><a href="#">Einstellungen</a></li>
-                                <li><a href="#">Statistiken</a></li>
-                                <li><a href="#">Admin</a></li>
-                            </ul>
-                        </li>
-                        <li><a href="#"></a></li>
-                        <li><a href="#">Logout</a></li>
-                    </ul>
+            <div class="cell">
+                <div class="grid-x">
+                    <div class="cell small-10 text-center">
+                        {% block APPTITLE-MOB %}{% endblock %}
+                    </div>
+                    <div class="cell small-2"></div>
                 </div>
-                <div class="cell small-4 text-center hide-for-small-only">{% block APPTITLE %}{% endblock %}</div>
-                <div class="cell small-4 hide-for-small-only"></div>
             </div>
         </div>
+        <!-- /mobile nav bar -->
+        <div class="top-bar grid-x" id="example-animated-menu" data-animate="hinge-in-from-top spin-out">
+            <div class="top-bar-left cell small-4">
+                <ul class="dropdown menu" data-dropdown-menu>
+                    <li><a href="#">Menu</a>
+                        <ul class="menu vertical">
+                            <li><a href="#">Einstellungen</a></li>
+                            <li><a href="#">Statistiken</a></li>
+                            <li><a href="#">Admin</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#"></a></li>
+                    <li><a href="#">Logout</a></li>
+                </ul>
+            </div>
+            <div class="cell small-4 text-center hide-for-small-only">{% block APPTITLE %}{% endblock %}</div>
+            <div class="cell small-4 hide-for-small-only"></div>
+        </div>
+    </header>
+    <article class="grid-container main">
+
         <div class="cell medium-auto medium-cell-block-container">
             <div class="grid-x grid-padding-x">
                 <div class="cell shrink"></div>
@@ -56,10 +57,10 @@
                 <div class="cell shrink"></div>
             </div>
         </div>
-        <div class="cell shrink footer">
-            <span>© 2019 rwalser.ch - Alle Rechte vorbehalten.</span>
-        </div>
-    </div>
+    </article>
+    <footer class="footer">
+        <span>© 2019 rwalser.ch - Alle Rechte vorbehalten.</span>
+    </footer>
     <script src="{% static 'js/vendor/jquery.js' %}"></script>
     <script src="{% static 'js/vendor/what-input.js' %}"></script>
     <script src="{% static 'js/vendor/foundation.js' %}"></script>
