@@ -21,5 +21,23 @@ h1, h3 {
 }
 
 div {
-  border: 1px dotted red;
+  _border: 1px dotted red;
+}
+
+.title-bar,
+.top-bar {
+  background: #e6e6e6;
+  color: #cc8b00;
+}
+
+.menu a {
+  color: orange;
+}
+
+.dropdown.menu .is-active a {
+  color: orangered;
+}
+
+.dropdown.menu > li.is-dropdown-submenu-parent > a::after {
+  border-color: orange transparent transparent;
 }
