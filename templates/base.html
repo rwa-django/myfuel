@@ -7,16 +7,32 @@
     <meta name="description" content=""/>
     <meta name="author" content=""/>
     {% load static %}
-    <link href="{% static 'css/main.css' %}" rel="stylesheet" type="text/css" media="screen" />
-    <title>Car Fuel</title>
+    <link rel="stylesheet" href="{% static 'css/foundation.css' %}">
+    <link rel="stylesheet" href="{% static 'css/app.css' %}">
+    <title>My Fuel</title>
 </head>
 <body>
     <header class="login">
-        <h2>{% block APPTITLE %}{% endblock %}</h2>
+        <div class="title-bar" data-responsive-toggle="example-animated-menu" data-hide-for="medium">
+            <div class="cell">
+                <div class="grid-x">
+                    <div class="cell text-center">
+                        {% block APPTITLE %}{% endblock %}
+                    </div>
+                </div>
+            </div>
+        </div>
     </header>
-    <main class="login">
-        {% block content %}{% endblock %}
-    </main>
+    <article class="grid-container article_main">
+        <div class="cell medium-auto medium-cell-block-container main_content">
+            <div class="grid-y login_main">
+                <div class="cell small-2"></div>
+                <div class="cell small-6 text-center">
+                    {% block content %}{% endblock %}
+                </div>
+            </div>
+        </div>
+    </article>
     <footer>
         <span>© 2019 rwalser.ch - Alle Rechte vorbehalten.</span>
     </footer>

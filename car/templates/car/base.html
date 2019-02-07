@@ -39,7 +39,7 @@
                         </ul>
                     </li>
                     <li><a href="#"></a></li>
-                    <li><a href="#">Logout</a></li>
+                    <li><a href="{% url 'logout' %}">Logout</a></li>
                 </ul>
             </div>
             <div class="cell small-4 text-center hide-for-small-only">{% block APPTITLE %}{% endblock %}</div>
@@ -49,11 +49,9 @@
     <article class="grid-container main">
         <div class="cell medium-auto medium-cell-block-container main_content">
             <div class="grid-x grid-padding-x">
-                <div class="cell shrink"></div>
                 <div class="cell auto xmedium-4 medium-cell-block-y text-center">
                     {% block content %}{% endblock %}
                 </div>
-                <div class="cell shrink"></div>
             </div>
         </div>
     </article>

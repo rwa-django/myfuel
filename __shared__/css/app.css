@@ -20,6 +20,12 @@ h1, h3 {
   height: calc(100vh - 67px);
   margin-bottom: 0;
 }
+.article_main {
+  height: calc(100vh - 53px);
+}
+.login_main {
+  height: calc(100vh);
+}
 
 .main_content {
   background-color: #f3f3f3;
